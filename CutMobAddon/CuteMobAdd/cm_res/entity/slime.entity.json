@@ -1,0 +1,50 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:slime",
+      "materials": {
+        "default": "slime",
+        "outer": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/cm/entity/slime"
+      },
+      "geometry": {
+        "default": "geometry.cm.slime",
+        "armor": "geometry.cm.slime.armor"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.squish_factor = (query.previous_squish_value + (query.current_squish_value - query.previous_squish_value) * query.frame_alpha);",
+          "variable.bounce = 1 / ((variable.squish_factor / (query.variant * 0.5 + 1)) + 1);",
+          "variable.horizontal_scale_amount = variable.bounce * query.variant;",
+          "variable.vertical_scale_amount = (1 / variable.bounce) * query.variant;"
+        ],
+        "scaleX": "math.sqrt(variable.horizontal_scale_amount) / 2",
+        "scaleY": "math.sqrt(variable.vertical_scale_amount) / 2",
+        "scaleZ": "math.sqrt(variable.horizontal_scale_amount) / 2"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "walk": "animation.cm.walk",
+        "bob": "animation.cm.bob",
+        "jump": "animation.cm.jump.dwalk",
+        "riding": "animation.cm.riding"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.move.jump" },
+        { "riding": "controller.animation.cm.riding" }
+      ],
+      "render_controllers": [
+        "controller.render.slime",
+        "controller.render.slime_armor"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 10
+      }
+    }
+  }
+}

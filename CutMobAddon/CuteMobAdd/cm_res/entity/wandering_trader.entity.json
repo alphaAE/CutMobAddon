@@ -1,0 +1,41 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:wandering_trader",
+      "materials": {
+        "default": "wandering_trader"
+      },
+      "textures": {
+        "default": "textures/cm/entity/wandering_trader"
+      },
+      "geometry": {
+        "default": "geometry.cm.villager"
+      },
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "walk": "animation.cm.walk",
+        "bob": "animation.cm.bob",
+        "jump": "animation.cm.jump.dwalk",
+        "riding": "animation.cm.riding",
+
+        "raise_arms": "animation.cm.villager.raise_arms",
+        "get_in_bed": "animation.cm.villager.get_in_bed"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.villager_v2.move.jump" },
+        { "riding": "controller.animation.cm.riding" },
+
+        { "raise_arms": "controller.animation.cm.villager_v2.raise_arms" }
+      ],
+      "render_controllers": [ "controller.render.wandering_trader" ],
+      "spawn_egg": {
+        "texture": "spawn_egg_wandering_trader"
+      }
+    }
+  }
+}

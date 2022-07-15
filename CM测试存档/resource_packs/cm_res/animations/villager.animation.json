@@ -1,0 +1,25 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.cm.villager.get_in_bed" : {
+			"loop" : true,
+			"bones" : {
+				"waist" : {
+					"position" : [ 0.0, 1.0, -15.0 ],
+					"rotation" : [ -90.0, 0.0, 0.0 ]
+				},
+				"head" : {
+					"rotation" : [ -90.0, 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.cm.villager.raise_arms" : {
+			"loop" : true,
+			"bones" : {
+				"rightArm" : {
+					"rotation" : [ "variable.raise_arms * -15.0", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

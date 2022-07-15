@@ -1,0 +1,40 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cm.skeleton.move.jump" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"bob",
+						{
+							"walk" : "query.modified_move_speed"
+						},
+						{
+							"jump" : "query.vertical_speed > 0.04 || query.vertical_speed < -0.04 && query.is_in_water == 0"
+						},
+						"look_at_target"
+					],
+					"transitions" : [
+						{
+							"bow_and_arrow" : "query.has_target"
+						}
+					]
+				},
+				"bow_and_arrow" : {
+					"animations" : [ 
+						"bow_and_arrow" , 
+						{ "walk" : "query.modified_move_speed" },
+						"look_at_target"
+					],
+					"transitions" : [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				}
+			}
+		}
+
+	}
+}

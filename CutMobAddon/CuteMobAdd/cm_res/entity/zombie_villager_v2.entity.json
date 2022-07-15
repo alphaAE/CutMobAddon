@@ -1,0 +1,57 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:zombie_villager_v2",
+      "materials": {
+        "default": "zombie_villager_v2",
+        "masked": "zombie_villager_v2_masked"
+      },
+      "textures": {
+        "default": "textures/cm/entity/zombie_villager/zombie_villager",
+
+        "base": "textures/cm/entity/zombie_villager/zombie_villager",
+        "base2": "textures/cm/entity/zombie_villager/zombie_smith",
+        "base3": "textures/cm/entity/zombie_villager/zombie_priest",
+        "base4": "textures/cm/entity/zombie_villager/zombie_librarian",
+        "base5": "textures/cm/entity/zombie_villager/zombie_farmer",
+        "base6": "textures/cm/entity/zombie_villager/zombie_butcher"
+      },
+      "geometry": {
+        "default": "geometry.cm.zombie.villager"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.num_professions = 14;",
+          "variable.profession_index = ((query.variant < variable.num_professions) ? query.variant : 0);",
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ]
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "walk": "animation.cm.walk",
+        "bob": "animation.cm.bob",
+        "jump": "animation.cm.jump.dwalk",
+        "riding": "animation.cm.riding",
+
+        "zombie_attack_bare_hand": "animation.cm.zombie.attack_bare_hand"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.move.jump" },
+        { "riding": "controller.animation.cm.riding" },
+
+        { "zombie_attack_bare_hand": "controller.animation.cm.zombie.attack_bare_hand" },
+        { "zombie_swimming": "controller.animation.cm.zombie.swimming" }
+      ],
+      "render_controllers": [
+        "controller.render.alphaae.zombie_villager_v2_base"
+      ],
+      "enable_attachables": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 42
+      }
+    }
+  }
+}

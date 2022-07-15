@@ -1,0 +1,106 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cm.wolf.move.jump" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"bob",
+						{
+							"walk" : "query.modified_move_speed"
+						},
+						{
+							"jump" : "query.vertical_speed > 0.04 || query.vertical_speed < -0.04 && query.is_in_water == 0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.angry" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "wolf_angry" ]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.head_rot_z" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"rot" : "query.is_interested || query.is_shaking_wetness"
+						}
+					]
+				},
+				"rot" : {
+					"animations" : [ "wolf_head_rot_z" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_interested && !query.is_shaking_wetness"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.look_at" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "wolf_look_at" ]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.shaking" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"shaking" : "query.is_shaking_wetness"
+						}
+					]
+				},
+				"shaking" : {
+					"animations" : [ "wolf_shaking" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_shaking_wetness"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.sitting" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "wolf_leg_default" ],
+					"transitions" : [
+						{
+							"sitting" : "query.is_sitting"
+						}
+					]
+				},
+				"sitting" : {
+					"animations" : [ "wolf_sitting" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_sitting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.wolf.tail_default" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "wolf_tail_default" ]
+				}
+			}
+		}
+	}
+}

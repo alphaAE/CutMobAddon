@@ -1,0 +1,31 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:iron_golem",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/cm/entity/iron_golem"
+      },
+      "geometry": {
+        "default": "geometry.cm.irongolem"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "walk": "animation.cm.iron_golem.walk",
+        "bob": "animation.cm.bob",
+        "jump": "animation.cm.jump.dwalk",
+        "riding": "animation.cm.riding",
+
+        "attack": "animation.cm.iron_golem.attack",
+        "flower": "animation.cm.iron_golem.flower"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.iron_golem.move.jump" },
+        { "riding": "controller.animation.cm.riding" }
+      ],
+      "render_controllers": [ "controller.render.iron_golem" ]
+    }
+  }
+}

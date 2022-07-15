@@ -1,0 +1,116 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cm.look_at_target" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "look_at_target" ]
+				}
+			}
+		},
+		"controller.animation.cm.attack" : {
+			"initial_state" : "default",
+			"states" : {
+				"attacking" : {
+					"animations" : [ "attack.rotations" ],
+					"transitions" : [
+						{
+							"default" : "variable.attack_time < 0.0"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"attacking" : "variable.attack_time >= 0.0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.move.jump" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"bob",
+						{
+							"walk" : "query.modified_move_speed"
+						},
+						{
+							"jump" : "query.vertical_speed > 0.04 || query.vertical_speed < -0.04 && query.is_in_water == 0"
+						},
+						"look_at_target"
+					]
+				}
+			}
+		},
+		"controller.animation.cm.bob" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "bob" ]
+				}
+			}
+		},
+		"controller.animation.cm.bob.hair" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "bob.hair" ]
+				}
+			}
+		},
+		"controller.animation.cm.bob.float.leg" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [ "bob.float.leg" ]
+				}
+			}
+		},
+		"controller.animation.cm.riding" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"riding" : "query.is_riding"
+						}
+					]
+				},
+				"riding" : {
+					"animations" : [ "riding" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_riding"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.bow_and_arrow" : {
+			"initial_state" : "default",
+			"states" : {
+				"bow_and_arrow" : {
+					"animations" : [ "bow_and_arrow" ],
+					"transitions" : [
+						{
+							"default" : "!query.has_target"
+						}
+					]
+				},
+				"default" : {
+					"transitions" : [
+						{
+							"bow_and_arrow" : "query.has_target"
+						}
+					]
+				}
+			}
+		}
+
+
+	}
+}

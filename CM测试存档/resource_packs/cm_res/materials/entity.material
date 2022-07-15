@@ -1,0 +1,15 @@
+{
+  "materials": {
+    "version": "1.0.0",
+    "cm_alpha:entity_alphatest": {
+		  "+states": [ "Blending" ]
+	  },
+    "creeper:entity_emissive_alpha": {},
+	  "mooshroom:entity_emissive_alpha": {},
+	  "silverfish:entity_emissive_alpha": {},
+	  "snow_golem:entity_emissive_alpha": {},
+	
+	  "wolf:entity_emissive_alpha": {}
+
+  }
+}

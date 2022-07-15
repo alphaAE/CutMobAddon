@@ -1,0 +1,77 @@
+{
+	"format_version": "1.8.0",
+	"geometry.cm.zombie": {
+		"texturewidth": 64,
+		"textureheight": 128,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 12, 0]
+			},
+			{
+				"name": "head",
+				"parent": "waist",
+				"pivot": [0, 25, 0],
+				"cubes": [
+					{"origin": [-3.5, 25, -3], "size": [7, 7, 6], "uv": [0, 0]},
+					{"origin": [-4, 24, -3.5], "size": [8, 8, 7], "uv": [0, 13]},
+					{"origin": [-3, 32, -2.5], "size": [6, 1, 5], "uv": [0, 30]},
+					{"origin": [-5, 24, -3.5], "size": [10, 7, 6], "uv": [0, 71]}
+				]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 16, 0],
+				"cubes": [
+					{"origin": [-1.5, 24, -1.5], "size": [3, 2, 3], "uv": [0, 42]},
+					{"origin": [-3.5, 19, -1.5], "size": [7, 5, 3], "uv": [0, 47]},
+					{"origin": [-3, 16, -1.5], "size": [6, 3, 3], "uv": [0, 55]},
+					{"origin": [-3.5, 12, -1.5], "size": [7, 4, 3], "uv": [0, 64]}
+				]
+			},
+			{
+				"name": "leftarm",
+				"parent": "waist",
+				"pivot": [4.5, 23, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [3.5, 12, -1], "size": [2, 12, 2], "uv": [36, 0]}
+				]
+			},
+			{
+				"name": "rightarm",
+				"parent": "waist",
+				"pivot": [-4.5, 23, 0],
+				"cubes": [
+					{"origin": [-5.5, 12, -1], "size": [2, 12, 2], "uv": [36, 0]}
+				]
+			},
+			{
+				"name": "rightitem",
+				"parent": "rightarm",
+				"pivot": [-6, 15, 1]
+			},
+			{
+				"name": "leftleg",
+				"parent": "waist",
+				"pivot": [1.9, 12, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [0.5, 0, -1.5], "size": [3, 12, 3], "uv": [52, 15]}
+				]
+			},
+			{
+				"name": "rightleg",
+				"parent": "waist",
+				"pivot": [-1.9, 12, 0],
+				"cubes": [
+					{"origin": [-3.5, 0, -1.5], "size": [3, 12, 3], "uv": [52, 0]}
+				]
+			}
+		]
+	}
+}

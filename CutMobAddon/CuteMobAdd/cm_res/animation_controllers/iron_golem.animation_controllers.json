@@ -1,0 +1,51 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cm.iron_golem.move.jump" : {
+			"initial_state" : "default",
+			"states" : {
+				"attack" : {
+					"animations" : [ "attack" ],
+					"transitions" : [
+						{
+							"default" : "variable.attack_animation_tick <= 0.0"
+						}
+					]
+				},
+				"default" : {
+					"animations" : [
+						"bob",
+						{
+							"walk" : "query.modified_move_speed"
+						},
+						{
+							"jump" : "query.vertical_speed > 0.04 || query.vertical_speed < -0.04 && query.is_in_water == 0"
+						},
+						"look_at_target"
+					],
+					"transitions" : [
+						{
+							"attack" : "variable.attack_animation_tick > 0.0"
+						},
+						{
+							"flower" : "variable.offer_flower_tick"
+						}
+					]
+				},
+				
+				"flower" : {
+					"animations" : [ "flower" ],
+					"transitions" : [
+						{
+							"attack" : "variable.attack_animation_tick > 0.0"
+						},
+						{
+							"default" : "variable.offer_flower_tick <= 0.0"
+						}
+					]
+				}
+			}
+		}
+
+	}
+}

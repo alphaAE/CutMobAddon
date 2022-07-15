@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"geometry.cm.irongolem": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "head",
+				"parent": "waist",
+				"pivot": [0, 25, 0],
+				"cubes": [
+					{"origin": [-3.5, 25, -3], "size": [7, 6, 6], "uv": [0, 0]},
+					{"origin": [-4, 24, -3.5], "size": [8, 7, 7], "uv": [0, 12]},
+					{"origin": [-4, 31, -3.5], "size": [8, 3, 7], "uv": [0, 26]},
+					{"origin": [4, 29, -0.5], "size": [1, 4, 1], "uv": [32, 0]}
+				]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 14.25, 0],
+				"cubes": [
+					{"origin": [-1.5, 24, -1.5], "size": [3, 2, 3], "uv": [0, 42]},
+					{"origin": [-3.5, 19, -1.5], "size": [7, 5, 3], "uv": [0, 47]},
+					{"origin": [-3, 13, -1.5], "size": [6, 6, 3], "uv": [0, 55]},
+					{"origin": [-3.5, 12, -2], "size": [7, 3, 4], "uv": [42, 32]},
+					{"origin": [-4, 9, -2.5], "size": [8, 3, 5], "uv": [38, 39]},
+					{"origin": [-3, 20, -2.5], "size": [6, 2, 2], "uv": [48, 56]}
+				]
+			},
+			{
+				"name": "breast",
+				"parent": "body",
+				"pivot": [-0.5, 21, -1.5],
+				"rotation": [-45, 0, 0],
+				"cubes": [
+					{"origin": [-3, 21, -2.92], "size": [6, 2, 2], "uv": [48, 52]},
+					{"origin": [-3, 19.59, -1.51], "size": [6, 2, 2], "uv": [48, 60]}
+				]
+			},
+			{
+				"name": "leftarm",
+				"parent": "waist",
+				"pivot": [4.5, 23, 0],
+				"cubes": [
+					{"origin": [3.5, 11, -1], "size": [2, 13, 2], "uv": [44, 0]}
+				]
+			},
+			{
+				"name": "rightarm",
+				"parent": "waist",
+				"pivot": [-4.5, 23, 0],
+				"cubes": [
+					{"origin": [-5.5, 11, -1], "size": [2, 13, 2], "uv": [36, 0]}
+				]
+			},
+			{
+				"name": "leftleg",
+				"parent": "waist",
+				"pivot": [2.5, 13, 0],
+				"mirror": true,
+				"cubes": [
+					{"origin": [0.5, 0, -1.5], "size": [3, 13, 3], "uv": [52, 16]}
+				]
+			},
+			{
+				"name": "rightleg",
+				"parent": "waist",
+				"pivot": [-2.5, 13, 0],
+				"cubes": [
+					{"origin": [-3.5, 0, -1.5], "size": [3, 13, 3], "uv": [52, 0]}
+				]
+			}
+		]
+	}
+}

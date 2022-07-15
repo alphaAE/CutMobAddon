@@ -1,0 +1,13 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.cm.creeper.swelling" : {
+			"loop" : true,
+			"bones" : {
+				"waist" : {
+					"scale" : [ "variable.swelling_scale1", "variable.swelling_scale2", "variable.swelling_scale1" ]
+				}
+			}
+		}
+	}
+}

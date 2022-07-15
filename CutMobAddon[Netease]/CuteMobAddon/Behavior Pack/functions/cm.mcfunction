@@ -1,0 +1,1 @@
+say Thank you for using Cute Mob Addon JAVA@Yarrmateys BE@alphaAE

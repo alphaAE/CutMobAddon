@@ -1,0 +1,55 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.cm.villager_v2.move.jump" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"animations" : [
+						"bob",
+						{
+							"walk" : "query.modified_move_speed"
+						},
+						{
+							"jump" : "query.vertical_speed > 0.04 || query.vertical_speed < -0.04 && query.is_in_water == 0"
+						},
+						"look_at_target"
+					],
+					"transitions" : [
+						{
+							"get_in_bed" : "query.is_sleeping"
+						}
+					]
+				},
+				"get_in_bed" : {
+					"animations" : [ "get_in_bed" ],
+					"transitions" : [
+						{
+							"default" : "!query.is_sleeping"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.cm.villager_v2.raise_arms" : {
+			"initial_state" : "default",
+			"states" : {
+				"default" : {
+					"transitions" : [
+						{
+							"raising" : "variable.raise_arms > 0.0"
+						}
+					]
+				},
+				"raising" : {
+					"animations" : [ "raise_arms" ],
+					"transitions" : [
+						{
+							"default" : "variable.raise_arms == 0.0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+    "format_version": 1,
+    "header": {
+        "name": "Cute Mob Addon",
+        "description": "萌化怪物组模 BE @alphaAE",
+        "uuid": "b1f46d39-6c2c-b9ad-9857-7c17b2b2a9f1",
+        "min_engine_version": [1, 10, 0],
+        "version": [1, 2, 0]
+    },
+    "modules": [
+        {
+            "description": "Cute Mob Addon Behavior",
+            "type": "data",
+            "uuid": "6967a0fa-7e1b-f488-de04-00aac19afb53",
+            "version": [1, 2, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "version": [1, 2, 0 ],
+            "uuid": "0715537e-f303-45e2-26ef-3bad5705d2d6"
+        }
+    ]
+}

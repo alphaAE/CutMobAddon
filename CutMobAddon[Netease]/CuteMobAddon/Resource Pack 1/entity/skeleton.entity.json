@@ -1,0 +1,43 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:skeleton",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "cm_alpha"
+      },
+      "textures": {
+        "default": "textures/cm/entity/skeleton/skeleton"
+      },
+      "geometry": {
+        "default": "geometry.cm.skeleton"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 9
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"
+        ]
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "walk": "animation.cm.walk",
+        "bob": "animation.cm.bob",
+        "jump": "animation.cm.jump.dwalk",
+        "riding": "animation.cm.riding",
+        
+        "bow_and_arrow": "animation.cm.bow_and_arrow"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.skeleton.move.jump" },
+        { "riding": "controller.animation.cm.riding" }
+      ],
+      "render_controllers": [ "controller.render.skeleton" ],
+      "enable_attachables": true
+    }
+  }
+}

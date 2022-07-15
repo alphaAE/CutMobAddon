@@ -1,0 +1,44 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:blaze",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "body": "blaze_body",
+        "head": "blaze_head"
+      },
+      "textures": {
+        "default": "textures/cm/entity/blaze"
+      },
+      "geometry": {
+        "default": "geometry.cm.blaze"
+      },
+      "animations": {
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.blaze.move",
+        "bob": "animation.cm.bob",
+        "bob.hair": "animation.cm.bob.hair",
+        "bob.float.leg": "animation.cm.bob.float.leg",
+        "riding": "animation.cm.riding"
+      },
+      "particle_effects": {
+        "charged_flames": "minecraft:mobflame_emitter"
+      },
+      "animation_controllers": [
+        { "look_at_target": "controller.animation.cm.look_at_target" },
+        { "move": "controller.animation.cm.blaze.move" },
+        { "flame": "controller.animation.cm.blaze.flame" },
+        { "bob": "controller.animation.cm.bob" },
+        { "bob.hair": "controller.animation.cm.bob.hair" },
+        { "bob.float.leg": "controller.animation.cm.bob.float.leg" },
+        { "riding": "controller.animation.cm.riding" }
+      ],
+      "render_controllers": [ "controller.render.blaze" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 21
+      }
+    }
+  }
+}

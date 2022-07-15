@@ -1,0 +1,76 @@
+{
+	"format_version": "1.8.0",
+	"geometry.cm.cspider": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 2,
+		"visible_bounds_offset": [0, 1, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-1.5, 22, -1.5], "size": [3, 2, 3], "uv": [20, 13]},
+					{"origin": [-3.5, 17, -1.5], "size": [7, 5, 3], "uv": [0, 15]},
+					{"origin": [-3, 12, -1.5], "size": [6, 5, 3], "uv": [0, 23]},
+					{"origin": [-3.5, 12, -2], "size": [7, 2, 4], "uv": [20, 18]},
+					{"origin": [-4, 10, -2.5], "size": [8, 2, 5], "uv": [18, 24]}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "waist",
+				"pivot": [0, 23, 0],
+				"cubes": [
+					{"origin": [-3.5, 23, -3], "size": [7, 7, 6], "uv": [0, 0]},
+					{"origin": [-4, 23, -3.5], "size": [8, 7, 7], "uv": [0, 31]},
+					{"origin": [-3, 30, -3], "size": [6, 1, 6], "uv": [0, 45]},
+					{"origin": [-5, 28, -2.5], "size": [1, 2, 1], "uv": [26, 0]},
+					{"origin": [4, 28, -2.5], "size": [1, 2, 1], "uv": [26, 0]},
+					{"origin": [-5, 24, -1.5], "size": [2, 5, 4], "uv": [30, 31]},
+					{"origin": [3, 24, -1.5], "size": [2, 5, 4], "uv": [42, 31]},
+					{"origin": [-6, 26, -0.5], "size": [2, 2, 2], "uv": [30, 40]},
+					{"origin": [4, 26, -0.5], "size": [2, 2, 2], "uv": [38, 40]}
+				]
+			},
+			{
+				"name": "leftArm",
+				"parent": "waist",
+				"pivot": [4.5, 21, 0],
+				"cubes": [
+					{"origin": [3.5, 12, -1], "size": [2, 10, 2], "uv": [44, 0]}
+				]
+			},
+			{
+				"name": "rightArm",
+				"parent": "waist",
+				"pivot": [-4.5, 21, 0],
+				"cubes": [
+					{"origin": [-5.5, 12, -1], "size": [2, 10, 2], "uv": [36, 0]}
+				]
+			},
+			{
+				"name": "leftLeg",
+				"parent": "waist",
+				"pivot": [2, 10, 0],
+				"cubes": [
+					{"origin": [0.4, 0, -1.5], "size": [3, 10, 3], "uv": [52, 0]}
+				]
+			},
+			{
+				"name": "rightLeg",
+				"parent": "waist",
+				"pivot": [-2, 10, 0],
+				"cubes": [
+					{"origin": [-3.4, 0, -1.5], "size": [3, 10, 3], "uv": [52, 0]}
+				]
+			}
+		]
+	}
+}

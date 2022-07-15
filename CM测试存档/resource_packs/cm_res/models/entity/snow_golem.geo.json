@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"geometry.cm.snowgolem": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 3,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "head",
+				"parent": "waist",
+				"pivot": [0, 25, 0],
+				"cubes": [
+					{"origin": [-3.5, 24, -3], "size": [7, 6, 6], "uv": [0, 0]},
+					{"origin": [-4, 30, -3.5], "size": [8, 5, 7], "uv": [0, 28]},
+					{"origin": [-4, 21, -3.5], "size": [8, 9, 7], "uv": [0, 12]}
+				]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 11, 0],
+				"cubes": [
+					{"origin": [-3.5, 24, -2.5], "size": [7, 1, 5], "uv": [0, 40]},
+					{"origin": [-3.5, 18, -1.5], "size": [7, 6, 3], "uv": [0, 46]},
+					{"origin": [-3, 12, -1.5], "size": [6, 6, 3], "uv": [0, 55]},
+					{"origin": [-3.5, 11, -2], "size": [7, 3, 4], "uv": [42, 37], "inflate": 0.01},
+					{"origin": [-4, 7, -2.5], "size": [8, 4, 5], "uv": [38, 44]},
+					{"origin": [-4.5, 2, -3], "size": [9, 5, 6], "uv": [34, 53]}
+				]
+			},
+			{
+				"name": "leftarm",
+				"parent": "waist",
+				"pivot": [4.5, 24, 0],
+				"cubes": [
+					{"origin": [3.5, 13, -1], "size": [2, 12, 2], "uv": [44, 0]}
+				]
+			},
+			{
+				"name": "rightarm",
+				"parent": "waist",
+				"pivot": [-4.5, 24, 0],
+				"cubes": [
+					{"origin": [-5.5, 13, -1], "size": [2, 12, 2], "uv": [36, 0]}
+				]
+			},
+			{
+				"name": "leftleg",
+				"parent": "waist",
+				"pivot": [2, 11, 0],
+				"cubes": [
+					{"origin": [0.5, 0, -1.5], "size": [3, 12, 3], "uv": [52, 0]}
+				]
+			},
+			{
+				"name": "rightleg",
+				"parent": "waist",
+				"pivot": [-2, 11, 0],
+				"cubes": [
+					{"origin": [-3.5, 0, -1.5], "size": [3, 12, 3], "uv": [52, 0]}
+				]
+			}
+		]
+	}
+}

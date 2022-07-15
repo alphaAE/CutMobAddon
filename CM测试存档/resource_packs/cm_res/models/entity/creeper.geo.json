@@ -1,0 +1,99 @@
+{
+	"format_version": "1.8.0",
+	"geometry.cm.creeper": {
+		"texturewidth": 64,
+		"textureheight": 64,
+		"visible_bounds_width": 2,
+		"visible_bounds_height": 2,
+		"visible_bounds_offset": [0, 0, 0],
+		"bones": [
+			{
+				"name": "waist",
+				"pivot": [0, 0, 0]
+			},
+			{
+				"name": "body",
+				"parent": "waist",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-4, 10, -2.5], "size": [8, 2, 5], "uv": [38, 36]},
+					{"origin": [-3.5, 12, -2], "size": [7, 2, 4], "uv": [42, 30]},
+					{"origin": [-3, 14, -1.5], "size": [6, 3, 3], "uv": [46, 55]},
+					{"origin": [-3.5, 17, -1.5], "size": [7, 5, 3], "uv": [44, 47]},
+					{"origin": [-1.5, 22, -1.5], "size": [3, 2, 3], "uv": [32, 48]}
+				]
+			},
+			{
+				"name": "breast",
+				"parent": "body",
+				"pivot": [0, 0, 0],
+				"cubes": [
+					{"origin": [-3, 18, -2.5], "size": [6, 2, 2], "uv": [0, 60]}
+				]
+			},
+			{
+				"name": "breast1",
+				"parent": "breast",
+				"pivot": [0, 17, 0],
+				"rotation": [-45, 0, 0],
+				"cubes": [
+					{"origin": [-3, 17.35, -3.89], "size": [6, 2, 2], "uv": [0, 52]}
+				]
+			},
+			{
+				"name": "breast2",
+				"parent": "breast",
+				"pivot": [0, 17, 0],
+				"rotation": [45, 0, 0],
+				"cubes": [
+					{"origin": [-3, 17.475, -1.06], "size": [6, 2, 2], "uv": [0, 60]}
+				]
+			},
+			{
+				"name": "head",
+				"parent": "waist",
+				"pivot": [0, 23, 0],
+				"cubes": [
+					{"origin": [-3.5, 23, -3], "size": [7, 7, 6], "uv": [0, 0]},
+					{"origin": [-4, 22, -3.5], "size": [8, 8, 7], "uv": [0, 13]},
+					{"origin": [-5, 22, -3.5], "size": [10, 6, 6], "uv": [0, 35]},
+					{"origin": [-3.5, 30, -3], "size": [7, 1, 6], "uv": [0, 28]}
+				]
+			},
+			{
+				"name": "leftarm",
+				"parent": "waist",
+				"pivot": [4.5, 21, 0],
+				"cubes": [
+					{"origin": [3.5, 10, -1], "size": [2, 12, 2], "uv": [44, 0]},
+					{"origin": [3, 11, -1.5], "size": [3, 8, 3], "uv": [16, 53]}
+				]
+			},
+			{
+				"name": "rightarm",
+				"parent": "waist",
+				"pivot": [-4.5, 21, 0],
+				"cubes": [
+					{"origin": [-5.5, 10, -1], "size": [2, 12, 2], "uv": [36, 0]},
+					{"origin": [-6, 11, -1.5], "size": [3, 8, 3], "uv": [16, 53]}
+				]
+			},
+			{
+				"name": "leftleg",
+				"parent": "waist",
+				"pivot": [2, 11, -1.5],
+				"cubes": [
+					{"origin": [0.4, 0, -1.5], "size": [3, 12, 3], "uv": [52, 0]}
+				]
+			},
+			{
+				"name": "rightleg",
+				"parent": "waist",
+				"pivot": [-2, 11, -1.5],
+				"cubes": [
+					{"origin": [-3.4, 0, -1.5], "size": [3, 12, 3], "uv": [52, 0]}
+				]
+			}
+		]
+	}
+}
